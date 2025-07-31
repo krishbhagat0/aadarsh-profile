@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aadarsh Sharma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+  <div class="container">
+    <h1>Aadarsh Sharma</h1>
+    <img src="images/WhatsApp Image 2025-07-31 at 18.00.27.jpeg" alt="Aadarsh's Photo" class="profile-pic">
+    <br>
+    <a href="profile.html" id="view-profile" class="view-button">View Profile</a>
+  </div>
+  <script>
+  window.addEventListener("DOMContentLoaded", function () {
+    document.body.classList.add("loaded");
+  });
+</script>
+<div id="ball"></div>
+
+<script>
+  const viewBtn = document.getElementById("view-profile");
+  const ball = document.getElementById("ball");
+
+  viewBtn.addEventListener("click", function (e) {
+    e.preventDefault(); // prevent instant redirect
+    ball.classList.add("animate");
+
+    // Delay redirect until animation is done
+    setTimeout(() => {
+      window.location.href = "profile.html";
+    }, 1400); // match animation time
+  });
+</script>
+</body>
+</html>
